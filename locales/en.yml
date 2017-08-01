@@ -1,0 +1,8 @@
+language: en
+hello: Hello world
+homepage:
+  title: This is an example page
+  content: The content on this page shows how you can use i18n relatively easy within a Gulp workflow.
+  link:
+    href: http://example.com/
+    text: Read more

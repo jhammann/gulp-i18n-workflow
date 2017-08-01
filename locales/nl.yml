@@ -1,0 +1,8 @@
+language: nl
+hello: Hallo wereld
+homepage:
+  title: Dit is een voorbeeld pagina
+  content: De content op deze pagina laat zien hoe je relatief eenvoudig i18n kan gebruiken binnen een Gulp workflow.
+  link:
+    href: https://example.nl
+    text: Lees meer

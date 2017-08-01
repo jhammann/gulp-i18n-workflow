@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "func-names": 0,
+    "max-len": [
+      2,
+      {
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "jquery": true
+  }
+}
