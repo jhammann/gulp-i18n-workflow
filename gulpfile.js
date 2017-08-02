@@ -16,14 +16,14 @@ const language = argv.lang ? argv.lang : 'en';
 // Check if the locales files are present.
 gulp.task('check-files', () => {
   fs.access(`locales/${language}.yml`, (err) => {
-    if (err.code === 'ENOENT') {
+    if (err && err.code === 'ENOENT') {
       $.util.log($.util.colors.red(`File locales/${language}.yml not found.`));
       process.exit();
     }
   });
 });
 
-// Create HTML pages based on locales.
+// Create HTML pages based on locales and HTML templates.
 function i18nReplace(options) {
   const transform = function (file, encoding, cb) {
     const rawHtml = file.contents.toString(encoding);
@@ -72,7 +72,7 @@ gulp.task('serve', ['i18n'], () => {
     },
   });
 
-  // Watch for changes in either the HTML files or the locales.
+  // Watch for changes in either the HTML templates or the locales.
   gulp.watch(
     ['dev/html/**/*.html', 'locales/*.yml'],
     ['i18n-watch'],
